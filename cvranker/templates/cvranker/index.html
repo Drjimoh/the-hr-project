@@ -1,0 +1,12 @@
+<h1>Welcome home</h1>
+
+<form method="post">
+{% csrf_token %}
+{% for tag in form %}
+<br>
+<span style="text-transform: uppercase; ">  {{ tag.name }} : </span> {{ tag }}
+
+{% endfor %}
+
+<input type="submit" name="submit">
+</form>
